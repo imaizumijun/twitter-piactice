@@ -5,18 +5,28 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">{{ Auth::user()->name }}さんのタイムライン</div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
+                @foreach ($TweetDate as $Tweet)
+                    <div class="card-body">
+                        {{$Tweet -> tweet}}
+
+                        <br>
+                        <div style="display:flex; justify-content: left;align-items: center;">
+                            <div style="float:left">
+                                <!-- ↓に名前表示をする -->
+                                {{$Tweet -> created_at}}
+                            </div>
+                            <?php //@FIXME Favはマウスオーバーでアニメーションするだけの状態 ?>
+                            <div style="float:left" class="heart"></div>
                         </div>
-                    @endif
+                    </div>
 
-                    You are logged in!
-                </div>
+                    <hr style="margin-top:0px; margin-bottom:0px">
+                @endforeach
             </div>
+
+            <?php //{{ $tweets->links() }} ?>
         </div>
     </div>
 </div>

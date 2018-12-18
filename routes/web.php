@@ -20,7 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 //メニュー画面
 Route::get('/Menu', 'MenuController@index')->name('Menu');
-//テストSame1
-Route::get('/same1', 'Same1Controller@index')->name('Same1');
-//テストSame2
-Route::get('/same2', 'Same2Controller@index')->name('Same2');
+//ツイート
+Route::post('/tweet', 'TweetsController@tweet');
