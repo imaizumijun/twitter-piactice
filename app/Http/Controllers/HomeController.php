@@ -24,7 +24,17 @@ class HomeController extends Controller
      */
     public function index()
     {
+        //全部のデータを読み込むやつ
         $Tweets = Tweet::all();
         return view('home',['TweetDate' => $Tweets]);
+
+        // // joinしたデータを取得
+        // $Tweets = Tweet::select()
+        //     -> join('users','tweets.user_id','=','users.id')
+        //     -> get();
+
+    //     // viewに渡す
+    //     return view('home',['TweetDate' => $Tweets]);
+
     }
 }

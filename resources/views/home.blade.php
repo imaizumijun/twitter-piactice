@@ -15,7 +15,10 @@
                         <div style="display:flex; justify-content: left;align-items: center;">
                             <div style="float:left">
                                 <!-- ↓に名前表示をする -->
-                                {{$Tweet -> created_at}}
+                                {{$Tweet->user->name}}
+                                 / 
+                                <!-- ↓に時間表示をする -->
+                                {{$Tweet->created_at}}
                             </div>
                             <?php //@FIXME Favはマウスオーバーでアニメーションするだけの状態 ?>
                             <div style="float:left" class="heart"></div>

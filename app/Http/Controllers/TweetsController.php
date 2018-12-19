@@ -19,7 +19,6 @@ public function tweet(Request $request)
 	$tweet -> tweet = $request -> tweet;
 	$tweet -> user_id = Auth::user() -> id;
 	$tweet -> save();
-	
 	return redirect('/home');
 }
 
