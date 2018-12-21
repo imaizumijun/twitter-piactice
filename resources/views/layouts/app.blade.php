@@ -53,12 +53,12 @@
                         @else
                         
                             <li class="nav-item" style="display:flex; justify-content: center;align-items: center;">
-                                <?php
-                                //<a class="navbar-brand" href="{{ route('user_list') }}" style="font-size:13px">
-                                  ?>
-                                    {{ __('ユーザ一覧') }}
-                                    {{ config('app.name', 'Laravel') }}
-                                </a>
+<?php
+                                   //  <a class="navbar-brand" href="{{ route('user_list') }}" style="font-size:13px">
+                                   //  {{ __('ユーザ一覧') }}
+                                   //  {{ config('app.name', 'Laravel') }}
+                                   // </a>
+?>
                             </li>
                         
                             <li class="nav-item dropdown">

@@ -17,8 +17,12 @@ Route::get('/', function () {
 
 Auth::routes();
 //ホーム画面
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index');
 //メニュー画面
-Route::get('/Menu', 'MenuController@index')->name('Menu');
+Route::get('/Menu', 'MenuController@index');
 //ツイート
 Route::post('/tweet', 'TweetsController@tweet');
+//ユーザ 一覧
+Route::get('/user', 'UserController@index');
+//フォロー
+Route::post('/users/follow', 'UserController@follow');
