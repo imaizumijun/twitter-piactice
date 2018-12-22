@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 //ホーム画面
-Route::get('/home', 'HomeController@index');
+Route::get('/home', 'HomeController@tweets');
 //メニュー画面
 Route::get('/Menu', 'MenuController@index');
 //ツイート
@@ -26,3 +26,5 @@ Route::post('/tweet', 'TweetsController@tweet');
 Route::get('/user', 'UserController@index');
 //フォロー
 Route::post('/users/follow', 'UserController@follow');
+//フォロー中と自分のツイート一覧
+Route::post('/users/follow', 'HomeController@tweets');

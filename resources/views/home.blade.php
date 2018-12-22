@@ -5,6 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
+                <!-- 現在ログイン中のユーザ の名前を表示 -->
                 <div class="card-header">{{ Auth::user()->name }}さんのタイムライン</div>
 
                 @foreach ($TweetDate as $Tweet)
@@ -29,7 +30,7 @@
                 @endforeach
             </div>
 
-            <?php //{{ $tweets->links() }} ?>
+            {{ $TweetDate->links() }} 
         </div>
     </div>
 </div>
