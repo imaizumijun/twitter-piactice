@@ -42,12 +42,13 @@ class HomeController extends Controller
 
     public function tweets()
     {
+      //  $ueo = ueo
+      // dd($ueo);
         // ログイン中のユーザのフォロー中のユーザのユーザIDを取得
         //             ログイン中ユーザのIDを特定
                        //usersテーブルのidカラムのログイン中のidを取得
                        // $my_user = User::where ( 'id',Auth::id() ) ->get();
                        $my_user = User::find (Auth::id() );
-
         //             ↑の情報を元にフォロー中のユーザIDを特定
                        // $follow_ids = Follows::where ($my_user::follow_id());
 

@@ -30,8 +30,9 @@ class UserController extends Controller
     // viewでサブミットしたデータがリクエストに入ってきた
     // $request->followId
     {
+      // $aiu = aiu
+      // dd($aiu);
         //最初にDBにデータを登録をしたい
-
         //セーブするためにインスタンスモデル作成
           $follows = new Follows;
           //インスタンスモデルにユーザーID登録

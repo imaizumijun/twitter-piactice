@@ -27,4 +27,4 @@ Route::get('/user', 'UserController@index');
 //フォロー
 Route::post('/users/follow', 'UserController@follow');
 //フォロー中と自分のツイート一覧
-Route::post('/users/follow', 'HomeController@tweets');
+Route::post('/home', 'HomeController@tweets');
